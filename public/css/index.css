@@ -1,0 +1,149 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+}
+/* HEADER */
+.header img{
+    width: 30rem;
+    padding: 2rem;
+}
+.header-info{
+    background-image: url("https://hips.hearstapps.com/vidthumb/images/rick-morty-1571997817.jpg");
+    height:50rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header h1{
+    margin: 5rem 0 7rem 0;
+    font-size: 6rem;
+    font-weight: 400;
+    text-align: center;
+}
+/* navigate */
+
+.navigate-barra{
+    display: flex;
+    max-width: 60%;
+    justify-content: space-between;
+    margin: 2rem auto
+}
+.navigate-barra .nav-li{
+    background-color: royalblue;
+    color: #f1f1f1;
+    font-size: 2rem;
+    font-weight: 600;
+    padding:1rem 2rem;
+    margin-bottom: 5rem;
+    text-decoration: none;
+}
+/* main */
+.contenido {
+    max-width: min(90%, 120rem);
+    margin: 2rem auto;
+}
+
+.buscador {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.buscador__input {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    .contenedor-personajes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+.contenedor-personajes {
+    padding: 2rem;
+}
+
+.personaje {
+    border-radius: 25px 25px 0 0;
+    margin-bottom: 5rem;
+}
+
+.personaje:hover {
+    transform: translateY(-7px);
+    transition: .5s;
+    box-shadow: 0px 0px 15px 10px green;
+}
+
+.personaje__img {
+    border-radius: 50%;
+    transform: translateY(10rem);
+}
+.personaje .caja-imagen{
+    background-image: url("https://images3.alphacoders.com/812/812062.png");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.personaje__informacion {
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    padding: 1rem 0 0 0;
+}
+
+.personaje__nombre,
+.personaje__tipo,
+.personaje__estado {
+    margin: 2rem auto;
+    max-width:25rem;
+    padding: 1rem 0;
+    font-family: 'Montserrat', sans-serif;
+    ;
+}
+
+.personaje__nombre {
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 8rem;
+}
+.personaje-info{
+    display: flex;
+    background-color: #fff;
+    border: 1px solid;
+    color: #000;
+    align-items: center;
+    font-size: 2rem;
+    padding: 0 2rem;
+}
+
+.personaje__estado{
+    margin-right: 1rem;
+}
+.status-alive{
+    border-radius: 50%;
+    background-color: green;
+    width: 10px;
+    height: 10px;
+}
+
+.status-dead{
+    border-radius: 50%;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+}
