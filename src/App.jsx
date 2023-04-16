@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/layout/Header';
 import BuscarPersonajes from "./components/Main/BuscarPersonajes";
-import Navigate from './components/layout/Navigate';
+import Footer from './components/layout/Footer';
 
 const App = () => {
   return (
@@ -16,6 +16,7 @@ const App = () => {
             </Routes>
           </div>
         </div>
+        <Footer />
       </>
     </Router>
   )
