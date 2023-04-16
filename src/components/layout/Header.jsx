@@ -5,7 +5,8 @@ const Header = () => {
         <header className='header'>
             <img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/800px-Rick_and_Morty.svg.png"} alt="imagen" />
             <div className='header-info'></div>
-            <h1>Bienvenido a la APP Rick and Morty</h1>
+            <Navigate />
+            <h1>Bienvenido <span className='header-span'> API Rick and Morty</span></h1>
         </header>
     )
 }

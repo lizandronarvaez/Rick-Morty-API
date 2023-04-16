@@ -9,7 +9,6 @@ const App = () => {
     <Router>
       <>
         <Header />
-        <Navigate />
         <div className='contenido'>
           <div className='contenedor-personajes' id='contenedor-personajes'>
             <Routes>

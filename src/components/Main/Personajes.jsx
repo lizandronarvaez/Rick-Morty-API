@@ -18,8 +18,8 @@ const Personajes = ({ personaje }) => {
                   : <><p className="personaje__estado">Status: {personaje.status}</p><p className='status-dead'></p></>
                 }
               </div>
-
             </div>
+            <button className='personaje-informacion_boton'>Mas informacion</button>
           </div>
         ))
       }

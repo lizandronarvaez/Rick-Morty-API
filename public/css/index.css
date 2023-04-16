@@ -8,48 +8,86 @@ html {
 *:after {
     box-sizing: inherit;
 }
-body{
+
+body {
     font-size: 1.6rem;
 }
+
 /* HEADER */
-.header img{
+
+.header img {
     width: 30rem;
     padding: 2rem;
 }
 .header-info{
-    background-image: url("https://hips.hearstapps.com/vidthumb/images/rick-morty-1571997817.jpg");
-    height:50rem;
-    width: 100%;
+    background-image: url("../img/rickmorty.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    width: 100%;
+    height: 20rem;
 }
-.header h1{
-    margin: 5rem 0 7rem 0;
-    font-size: 6rem;
-    font-weight: 400;
+@media (min-width:768px){
+    .header-info {
+        background-image: url("../img/rickmorty.jpg");
+        height: 50rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+}
+
+.header h1 {
+    margin: 0 auto;
+    font-size: 8rem;
+    padding: 1rem;
+    font-weight: bold;
     text-align: center;
 }
+
+.header h1 span {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
 /* navigate */
 
-.navigate-barra{
+.navigate-barra {
     display: flex;
-    max-width: 60%;
+    flex-direction: column;
     justify-content: space-between;
-    margin: 2rem auto
+    padding: 3rem 0;
+    margin: 2rem auto 0 auto
 }
-.navigate-barra .nav-li{
+
+.navigate-barra .nav-li {
     background-color: royalblue;
     color: #f1f1f1;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
-    padding:1rem 2rem;
-    margin-bottom: 5rem;
+    padding: 1.5rem;
+    max-width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
     text-decoration: none;
 }
+@media (min-width: 768px) {
+    .navigate-barra{
+        max-width: 60%;
+        flex-direction: row;
+    }
+    .navigate-barra .nav-li{
+        font-size: 2rem;
+        padding: 1.5rem 2.5rem;
+    }
+}
+
 /* main */
 .contenido {
-    max-width: min(90%, 120rem);
+    max-width: min(90%, 125rem);
     margin: 2rem auto;
 }
 
@@ -68,37 +106,41 @@ body{
 @media (min-width: 768px) {
     .contenedor-personajes {
         display: grid;
+        align-items: flex-end;
         grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
+        column-gap: 5rem;
     }
 }
 
 .contenedor-personajes {
+    margin-top: 5rem;
     padding: 2rem;
 }
 
 .personaje {
     border-radius: 25px 25px 0 0;
+    text-align: center;
     margin-bottom: 5rem;
 }
 
 .personaje:hover {
-    transform: translateY(-7px);
-    transition: .5s;
-    box-shadow: 0px 0px 15px 10px green;
+    transform: translateY(-7px) scale(1.1);
+    transition: 1s;
 }
 
 .personaje__img {
     border-radius: 50%;
     transform: translateY(10rem);
 }
-.personaje .caja-imagen{
+
+.personaje .caja-imagen {
     background-image: url("https://images3.alphacoders.com/812/812062.png");
-    
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    border-radius: 70px 0 350px 0;
 }
+
 .personaje__informacion {
     text-align: center;
     color: #fff;
@@ -110,10 +152,9 @@ body{
 .personaje__tipo,
 .personaje__estado {
     margin: 2rem auto;
-    max-width:25rem;
+    max-width: 25rem;
     padding: 1rem 0;
     font-family: 'Montserrat', sans-serif;
-    ;
 }
 
 .personaje__nombre {
@@ -121,7 +162,8 @@ body{
     font-size: 3rem;
     padding-top: 8rem;
 }
-.personaje-info{
+
+.personaje-info {
     display: flex;
     background-color: #fff;
     border: 1px solid;
@@ -130,20 +172,38 @@ body{
     font-size: 2rem;
     padding: 0 2rem;
 }
-
-.personaje__estado{
-    margin-right: 1rem;
+.personaje__tipo{
+    font-size: 1.8rem;
 }
-.status-alive{
+.personaje__estado {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    font-size: 1.8rem;
+}
+
+.status-alive {
     border-radius: 50%;
     background-color: green;
     width: 10px;
     height: 10px;
 }
 
-.status-dead{
+.status-dead {
     border-radius: 50%;
     background-color: red;
     width: 10px;
     height: 10px;
+}
+
+.personaje-informacion_boton{
+    margin: 1rem auto;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    background-color: royalblue;
+    border: none;
+    color: #f1f1f1;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 10px;
 }
