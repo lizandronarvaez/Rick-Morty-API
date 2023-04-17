@@ -4,9 +4,9 @@ const Navigate = () => {
     return (
         <nav className='navigate'>
             <div className='navigate-barra'>
-                <a href="#contenedor-personajes" className="nav-li">Ver Personajes</a>
+                <a href="#buscador" className="nav-li">Ver Personajes</a>
                 <Link to={"/informacion-proyecto"} className="nav-li">Informacion Proyecto</Link>
-                <Link to={"/contacto"} className="nav-li">Contacto</Link>
+                <a href="#contacto" className="nav-li">Contacto</a>
             </div>
         </nav>
     )

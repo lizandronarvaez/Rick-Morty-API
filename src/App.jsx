@@ -10,11 +10,9 @@ const App = () => {
       <>
         <Header />
         <div className='contenido'>
-          <div className='contenedor-personajes' id='contenedor-personajes'>
-            <Routes>
-              <Route exact path="/" Component={BuscarPersonajes} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route exact path="/" Component={BuscarPersonajes} />
+          </Routes>
         </div>
         <Footer />
       </>
