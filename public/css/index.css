@@ -14,21 +14,22 @@ body {
 }
 
 /* HEADER */
-.header{
+.header {
     margin-bottom: 10rem;
 }
+
 .header img {
     width: 30rem;
     padding: 2rem;
 }
 
-.header-info {
+.header-bg {
     background-image: url("../img/rickmorty.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
-    height: 20rem;
+    height: 40rem;
 }
 
 .header h1 {
@@ -39,9 +40,18 @@ body {
 }
 
 @media (min-width:768px) {
+
     .header-info {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        place-items: center;
+        justify-items: flex-end;
+        padding: 0 3rem;
+    }
+
+    .header-bg {
         background-image: url("../img/rickmorty.jpg");
-        height: 50rem;
+        height: 60rem;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -89,7 +99,7 @@ body {
 
 @media (min-width: 768px) {
     .navigate-barra {
-        max-width: 60%;
+        display: contents;
         flex-direction: row;
         margin-bottom: 5rem;
     }
@@ -121,6 +131,7 @@ body {
     font-size: 2.4rem;
     font-family: 'Montserrat', sans-serif;
 }
+
 .buscador__input {
     width: 100%;
     padding: 1rem 2rem;
@@ -155,19 +166,21 @@ body {
 
 }
 
+.contenedor-personajes {
+    /* padding-top: 5rem; */
+    padding: 1rem;
+}
+
 @media (min-width: 768px) {
     .contenedor-personajes {
         display: grid;
         align-items: flex-end;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 5rem;
+        padding-top: 5rem;
     }
 }
 
-.contenedor-personajes {
-    margin-top: 5rem;
-    padding: 2rem;
-}
 
 .personaje {
     border-radius: 25px 25px 0 0;
@@ -261,6 +274,18 @@ body {
     font-size: 2rem;
     font-weight: 600;
     border-radius: 10px;
+}
+
+.personajes-length {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 800;
+    margin: 0;
+    padding-top: 3rem;
+}
+
+.personajes-length-active {
+    color: #ff0000;
 }
 
 /* footer */
