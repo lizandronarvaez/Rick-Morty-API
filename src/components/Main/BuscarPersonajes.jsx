@@ -58,14 +58,19 @@ const BuscarPersonajes = () => {
           value={getBusqueda}
           name="buscar"
         />
+        {filterPersonajes.length === 20 ?
+          null :
+          <p className="personajes-length">
+            Personajes encontrados: <span className="personajes-length-active">{filterPersonajes.length}</span>
+          </p>}
       </div>
       <div className='contenedor-personajes' id='contenedor-personajes'>
         {filterPersonajes.map(personaje => (
-            <Personajes
-              key={personaje.id}
-              datosPersonajes={personaje}
-            />
-          ))
+          <Personajes
+            key={personaje.id}
+            datosPersonajes={personaje}
+          />
+        ))
         }
       </div>
     </>

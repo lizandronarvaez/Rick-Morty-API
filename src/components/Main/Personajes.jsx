@@ -13,12 +13,18 @@ const Personajes = ({ datosPersonajes }) => {
           <div className='personaje-info'>
             <p className="personaje__tipo">Tipo: {species}</p>
             {status === "Alive" ?
-              <><p className="personaje__estado">Status: {status}</p><p className='status-alive'></p></>
-              : <><p className="personaje__estado">Status: {status}</p><p className='status-dead'></p></>
+              <>
+                <p className="personaje__estado">Status: {status}</p>
+                <p className='status-alive'></p>
+              </>
+              : <>
+                <p className="personaje__estado">Status: {status}</p><p className='status-dead'>
+
+                </p>
+              </>
             }
           </div>
         </div>
-        <button className='personaje-informacion_boton'>Mas informacion</button>
       </div>
     </>
 
