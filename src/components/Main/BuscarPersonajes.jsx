@@ -21,7 +21,6 @@ const BuscarPersonajes = () => {
     setBusqueda(e.target.value);
     filtrarPersonajes(e.target.value)
   }
-  console.log(getBusqueda)
   // FIltrar personajes
   const filtrarPersonajes = (value) => {
     const personajesFilter = personajes.filter(personaje => {
@@ -51,6 +50,7 @@ const BuscarPersonajes = () => {
           className="buscador__label">
           Buscas un personaje?
         </label>
+    
         <input className="buscador__input"
           onChange={busquedaPersonaje}
           placeholder="Introduce el nombre del personaje"

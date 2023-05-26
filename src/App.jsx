@@ -7,15 +7,13 @@ import Footer from './components/layout/Footer';
 const App = () => {
   return (
     <Router>
-      <>
-        <Header />
-        <div className='contenido'>
-          <Routes>
-            <Route exact path="/" Component={BuscarPersonajes} />
-          </Routes>
-        </div>
-        <Footer />
-      </>
+      <Header />
+      <div className='contenido'>
+        <Routes>
+          <Route exact path="/" Component={BuscarPersonajes} />
+        </Routes>
+      </div>
+      <Footer />
     </Router>
   )
 }
