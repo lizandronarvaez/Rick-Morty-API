@@ -1,19 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from './components/layout/Header';
-import BuscarPersonajes from "./components/Main/BuscarPersonajes";
-import Footer from './components/layout/Footer';
+import RickMortyApp from './components/Main/RIckMortyApp';
 
 const App = () => {
   return (
     <Router>
-      <Header />
-      <div className='contenido'>
-        <Routes>
-          <Route exact path="/" Component={BuscarPersonajes} />
-        </Routes>
-      </div>
-      <Footer />
+      <Routes>
+        <Route exact path="/" Component={RickMortyApp} />
+      </Routes>
     </Router>
   )
 }
